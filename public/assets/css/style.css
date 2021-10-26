@@ -1,0 +1,65 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+    width: 75px;
+}
+
+.logo-footer {
+    width: 200px;
+}
+
+#main-content {
+    min-height: 1024px;
+    background-color: #dcc0df;
+}
+
+footer {
+    color: white;
+}
+
+#footer-menu {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+#footer-menu li a {
+    text-decoration: none;
+    color: violet;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 15px;
+    font-size: 30px;
+    color: white;
+}
+
+.m-0 {
+    margin: 0px;
+}
+
+.py-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.bg-purple {
+    background-color: #622569;
+}
+
+.bg-copyright {
+    background-color: #55095e;
+    border-top: 1px solid #52065a;
+    padding: 15px;
+    font-size: 12px;
+}
+
+.bg-copyright a {
+    color: white;
+}
