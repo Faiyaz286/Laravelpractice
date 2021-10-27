@@ -6,13 +6,17 @@ body {
     width: 75px;
 }
 
+.R15 {
+    width: 750px;
+}
+
 .logo-footer {
     width: 200px;
 }
 
 #main-content {
     min-height: 1024px;
-    background-color: #dcc0df;
+    background-color: white;
 }
 
 footer {
@@ -62,4 +66,22 @@ footer {
 
 .bg-copyright a {
     color: white;
+}
+
+#details-menu li {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 50px;
+}
+
+.py-40 {
+    padding-top: 200px;
+    padding-bottom: 20px;
+}
+
+#video-content {
+    max-height: 1024px;
 }
