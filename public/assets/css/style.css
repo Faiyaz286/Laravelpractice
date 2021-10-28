@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .logo {
@@ -17,6 +17,10 @@ body {
 #main-content {
     min-height: 1024px;
     background-color: white;
+}
+
+#main .navbar {
+    border-radius: 0px;
 }
 
 footer {
@@ -47,7 +51,12 @@ footer {
 .m-0 {
     margin: 0px;
 }
-
+.p-0 {
+    padding: 0px;
+}
+.border-top {
+    border-top: 1px solid #d2d2d2;
+}
 .py-30 {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -84,4 +93,53 @@ footer {
 
 #video-content {
     max-height: 1024px;
+}
+
+.slide-image {
+    width: 100vw;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#slide-image-1 {
+    background-image: url("../images/slider/car.jpg");
+}
+
+#slide-image-2 {
+    background-image: url("../images/slider/cycle.jpg");
+}
+
+#slide-image-3 {
+    background-image: url("../images/slider/grocery.jpg");
+}
+.product-image-wrapper {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.green-shadow {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgb(253, 253, 255) 0%,
+        rgba(236, 238, 229, 0.191) 0%,
+        rgba(78, 143, 68, 1) 100%,
+        rgba(0, 212, 255, 1) 100%
+    );
+}
+.blue-shadow {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgb(253, 253, 255) 0%,
+        rgba(236, 238, 229, 0.191) 0%,
+        rgb(143, 142, 68) 100%,
+        rgb(255, 251, 0) 100%
+    );
+}
+.fc-white {
+    color: white;
 }
