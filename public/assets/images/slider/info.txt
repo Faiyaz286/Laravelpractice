@@ -1,1 +1,3 @@
 https://unsplash.com/s/photos/grocery
+
+https://shouts.dev/laravel-eloquent-one-to-one-relationship-tutorial

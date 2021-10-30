@@ -45,24 +45,23 @@
             </a>
         </div>
     </section>
-    <section id="home-product-1" class="home-product-left border-top green-shadow fc-white">
+    @foreach ($homeProducts as $homeProduct)
+    @if($loop->index%2 ==0)
+    <section id="home-product-{{$loop->index+1}}" class="home-product-left border-top green-shadow fc-white">
         <div class="row m-0">
             <div class="col-md-6 p-0">
                 <div class="product-image-wrapper"
-                    style="background-image: url({{ asset('assets/images/products/originals/bucket.jpg') }});">
+                    style="background-image: url({{ asset($homeProduct->product->default_image) }});">
                 </div>
             </div>
             <div class="col-md-6">
-                <h2>Green Coconut</h2>
-                <h3>Sku: AB-SL006-SPEE</h3>
+                <h2>{{$homeProduct->product->title}}</h2>
+                <h3>Sku: {{$homeProduct->product->sku}}</h3>
+                <h4>Price: ${{$homeProduct->product->price}} / Per {{$homeProduct->product->unit}}</h4>
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                   {{$homeProduct->product->short_description}}
                 </p>
+                
                 <div class="action-form-wrapper">
                     <form class="form-inline">
                         <div class="form-group">
@@ -75,25 +74,23 @@
                         </div>
                         <button type="submit" class="btn btn-warning">Add to Cart <i class="fa fa-shopping-cart"
                                 aria-hidden="true"></i></button>
-                        <a href="#" class="btn btn-success"> Product Details</a>
+                        <a href="/products/{{$homeProduct->product->slug}}" class="btn btn-success"> Product Details</a>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    @else
     <section id="home-product-2" class="home-product-right border-top blue-shadow">
         <div class="row m-0">
-            <div class="col-md-6">
-                <h2>Green Coconut</h2>
-                <h3>Sku: AB-SL006-SPEE</h3>
+        <div class="col-md-6">
+                <h2>{{$homeProduct->product->title}}</h2>
+                <h3>Sku: {{$homeProduct->product->sku}}</h3>
+                <h4>Price: ${{$homeProduct->product->price}} / Per {{$homeProduct->product->unit}}</h4>
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                   {{$homeProduct->product->short_description}}
                 </p>
+                
                 <div class="action-form-wrapper">
                     <form class="form-inline">
                         <div class="form-group">
@@ -106,21 +103,19 @@
                         </div>
                         <button type="submit" class="btn btn-warning">Add to Cart <i class="fa fa-shopping-cart"
                                 aria-hidden="true"></i></button>
-                        <a href="#" class="btn btn-success"> Product Details</a>
+                        <a href="/products/{{$homeProduct->product->slug}}" class="btn btn-success"> Product Details</a>
                     </form>
                 </div>
             </div>
             <div class="col-md-6 p-0">
                 <div class="product-image-wrapper"
-                    style="background-image: url({{ asset('assets/images/products/originals/flower.jpg') }});">
+                    style="background-image: url({{ asset($homeProduct->product->default_image) }});">
                 </div>
             </div>
         </div>
     </section>
-    <section id=" home-product-3" class="home-product-left">
-
-    </section>
-    <section id="home-product-4" class="home-product-right">
-
-    </section>
+    @endif
+    @endforeach
+    
+    
 @endsection
