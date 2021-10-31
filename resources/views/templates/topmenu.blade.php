@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('assets/images/constructions/logo.png') }}" alt="logo" class="logo">
                 
               </a>
@@ -17,7 +17,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a></li>
                 
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop <span class="caret"></span></a>
@@ -42,9 +42,9 @@
                 <button type="submit" class="btn btn-default">Search</button>
               </form>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><b>Contact</b></a></li>
-                <li><a href="#"><b>Login</b></a></li>
-                <li><a href="#"><b>Sign Up</b></a></li>
+                <li><a href="{{ route('contact') }}"><b>Contact</b></a></li>
+                <li><a href="{{ route('login') }}"><b>Login</b></a></li>
+                <li><a href="{{ route('user.registration') }}"><b>Sign Up</b></a></li>
                 
               </ul>
             </div><!-- /.navbar-collapse -->

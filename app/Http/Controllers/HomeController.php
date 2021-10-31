@@ -23,4 +23,10 @@ class HomeController extends Controller
         
         return view('pages.product-details',compact('product'));
     }
+
+    public function contact(){
+
+        return view('pages.contact');
+        
+    }
 }

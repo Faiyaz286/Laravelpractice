@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHomeProductsTable extends Migration
+class CreateContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateHomeProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('home_products', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained()->unique;
-            $table->integer('weight')->default(0);
+            $table->string('name', 250);
+            $table->string('email', 250);
+            $table->text('mobile');
+            $table->longText('comment');
             $table->softDeletes('deleted_at');
             $table->timestamps();
         });
@@ -29,6 +31,6 @@ class CreateHomeProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('home_products');
+        Schema::dropIfExists('contacts');
     }
 }
